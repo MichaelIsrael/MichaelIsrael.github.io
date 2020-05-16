@@ -10,12 +10,12 @@ title: Projects
     {% comment %} skipping self {% endcomment %}
   {% else %}
 * <a href="{{ repository.html_url }}">{{ repository.name }}</a>
-    {% if repository.project_tagline != "" %}
+    {% unless repository.project_tagline == "" or repository.project_tagline == nil %}
     - {{ repository.project_tagline }}
-    {% endif %}
-    {% if repository.project_title != "" %}
+    {% endunless %}
+    {% unless repository.project_title == "" or repository.project_title == nil %}
     - {{ repository.project_title }}
-    {% endif %}
+    {% endunless %}
   {% endif %}
 {% else %}
 *Oups! Looks like something went wrong!*
