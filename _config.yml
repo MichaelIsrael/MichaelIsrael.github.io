@@ -23,6 +23,7 @@ avatar: /assets/img/sample/avatar.jpg   # support internet resources
 
 github:
   username: MichaelIsrael             # change to your github username
+repository: MichaelIsrael/MichaelIsrael.github.io
 
 #twitter:
   #username: twitter_username            # change to your twitter username
