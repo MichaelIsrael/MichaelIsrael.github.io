@@ -1,20 +1,18 @@
 # The Site Settings
 # v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
+# https://MichaelIsrael.github.io/
+# © 2020 - Michael Israel
 # MIT licensed
-
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Michael Israel's home                         # the main title
+title: Michael Israel                         # the main title
 
-tagline: A place to vent.  # it will display as the sub-title
+tagline: ~MichaelI  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A place where Michael Israel comes to
-  vent.
+  My private yet public space to vent.
 
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://MichaelIsrael.github.io'
