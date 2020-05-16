@@ -16,6 +16,9 @@ title: Projects
     {% unless repository.project_title == "" or repository.project_title == nil %}
     - {{ repository.project_title }}
     {% endunless %}
+    {% for key_val in repository %}
+        - {{ key_val[0] }}: {{key_val[1]}}
+    {% endfor %}
   {% endif %}
 {% else %}
 *Oups! Looks like something went wrong!*
