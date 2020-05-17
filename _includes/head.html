@@ -148,6 +148,27 @@
 
   {% endif %}
 
+  {% if page.layout == 'tocpage' or (page.title == 'Projects' and page.layout == 'page') %}
+  Here also!!
+    <script src="{{ site.baseurl }}/assets/js/dist/timeago.min.js" async></script>
+    {% if site.google_analytics.pv.enabled %}
+      <script src="{{ site.baseurl }}/assets/data/pv-data.json"></script>
+      <script src="{{ site.baseurl }}/assets/lib/countUp.min.js" async></script>
+      <script src="{{ site.baseurl }}/assets/js/dist/pageviews.min.js" async></script>
+    {% endif %}
+    <link rel="preload" as="style" href="{{ site.baseurl }}/assets/css/post.css">
+    <link rel="preload" as="style" href="{{ site.baseurl }}/assets/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/post.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+
+      <link rel="preload" as="style" href="{{ site.baseurl }}/assets/lib/bootstrap-toc-1.0.1/bootstrap-toc.min.css">
+      <link rel="preload" as="script" href="{{ site.baseurl }}/assets/lib/bootstrap-toc-1.0.1/bootstrap-toc.min.js">
+
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/lib/bootstrap-toc-1.0.1/bootstrap-toc.min.css" />
+      <script src="{{ site.baseurl }}/assets/lib/bootstrap-toc-1.0.1/bootstrap-toc.min.js" async></script>
+      <script src="{{ site.baseurl }}/assets/js/dist/toc.min.js" async></script>
+  {% endif %}
+
   <script src="{{ site.baseurl }}/assets/js/dist/tooltip-loader.min.js" async></script>
 
 </head>
