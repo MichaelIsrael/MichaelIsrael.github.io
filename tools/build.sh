@@ -30,30 +30,20 @@ _help() {
 
 
 _init() {
-echo ">>>>>>>>>>>>>>In init 1!"
   cd $WORK_DIR
 
-echo ">>>>>>>>>>>>>>In init 2!"
   if [[ -d $CONTAINER ]]; then
-echo ">>>>>>>>>>>>>>In init 3!"
     rm -rf $CONTAINER
   fi
 
-echo ">>>>>>>>>>>>>>In init 4!"
   if [[ -d _site ]]; then
-echo ">>>>>>>>>>>>>>In init 5!"
     bundle exec jekyll clean
   fi
-echo ">>>>>>>>>>>>>>In init 6!"
 
   local _temp=$(mktemp -d)
-echo ">>>>>>>>>>>>>>In init 7!"
   cp -r * $_temp
-echo ">>>>>>>>>>>>>>In init 8!"
   cp -r .git $_temp
-echo ">>>>>>>>>>>>>>In init 9!"
   mv $_temp $CONTAINER
-echo ">>>>>>>>>>>>>>In init 10!"
 }
 
 
@@ -124,11 +114,8 @@ main() {
     esac
   done
 
-echo ">>>>>>>>>>>>>>Before init!"
   _init
-echo ">>>>>>>>>>>>>>Before build!"
   _build
-echo ">>>>>>>>>>>>>>End of main!"
 }
 
 main "$@"
