@@ -6,9 +6,10 @@ toc: true
 # © 2020 Michael Israel
 ---
 
-## My repositories
+## My repositories\*
 {% assign self = site.github.username | append: ".github.io" %}
-{% for repository in site.github.public_repositories %}
+{% assign repositories = (site.github.public_repositories | sort: "pushed_at") | reverse %}
+{% for repository in repositories %}
   {% unless repository.name == self %}
 ### {{ repository.name }}
     {% unless repository.description == "" or repository.description == nil %}
@@ -38,3 +39,6 @@ toc: true
 *Oups! Looks like something went wrong!*
 {% endfor %}
 
+
+<BR><br>
+_\* Sorted by the date of the last push as of {{ "now" | date: "%Y-%m-%d %H:%M:%S %Z" }} (the time this page was last updated)._
